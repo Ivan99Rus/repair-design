@@ -370,7 +370,13 @@ body {
         width: 32px;
         height: 2px;
         background-color: #E3B873;
-        margin: 0 10px; }
+        margin: 0 10px;
+        border-radius: 30px; }
+  .section-subtitle {
+    font-family: 'Futura Book', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.93rem; }
 
 .header {
   position: fixed;
@@ -530,7 +536,23 @@ body {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.214rem 2.6rem; }
+  padding: 1.214rem 2.6rem;
+  box-shadow: 0.357rem 0.357rem 0.714rem rgba(227, 184, 115, 0.3); }
+
+.design-project {
+  position: relative; }
+  .design-project::before {
+    content: '';
+    position: absolute;
+    background-color: #131313;
+    height: 50%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1; }
+  .design-project__subtitle {
+    margin: 1.714rem auto 2.857rem;
+    max-width: 52.93rem; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -550,10 +572,16 @@ body {
   .row {
     flex-direction: column;
     align-items: center; }
-  .types__card {
+  .types__card, .design-project__card {
     margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .design-project::before {
+    height: 100%; }
+  .design-project__section-title {
+    color: #fff; }
+  .design-project__subtitle {
+    color: #fff; } }
 
 @media screen and (max-width: 576px) {
   .contacts__phone {
