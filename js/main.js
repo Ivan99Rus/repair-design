@@ -11,6 +11,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     element.addEventListener('click', switchModal);
   });
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape')
+    modal.classList.remove('modal--visible');
+  });
+
   closeBtn.addEventListener('click', switchModal);
 
+  document.addEventListener('click', (event) => {
+    let target = event.target;
+
+    if (target.classList.contains('modal--visible'))
+      switchModal();
+  });
 });
