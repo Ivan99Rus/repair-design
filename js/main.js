@@ -19,13 +19,13 @@ $(document).ready(() => {
 
     $(document).on('click', (event) => {
       let target = event.target;
-      console.log("target", target)
   
       if ($(target).hasClass('modal--visible'))
         modal.toggleClass('modal--visible');  
     });
 
-  scrollToTopBtn.click(() => {
-    $("body").scrollTop(0);
+  scrollToTopBtn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
   });
 });
