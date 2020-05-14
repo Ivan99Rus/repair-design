@@ -1,7 +1,8 @@
 $(document).ready(() => {
-  let modal = $('.modal'),
+  const modal = $('.modal'),
     modalBtn = $('[data-toggle="modal"]'),
     closeBtn = $('.modal__close');
+    scrollToTopBtn = $('.btn__scroll-to-top');
 
     modalBtn.on('click', () => {
       modal.toggleClass('modal--visible');
@@ -23,4 +24,8 @@ $(document).ready(() => {
       if ($(target).hasClass('modal--visible'))
         modal.toggleClass('modal--visible');  
     });
+
+  scrollToTopBtn.click(() => {
+    $("body").scrollTop(0);
+  });
 });
