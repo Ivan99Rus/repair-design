@@ -1,27 +1,26 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
+$(document).ready(() => {
+  let modal = $('.modal'),
+    modalBtn = $('[data-toggle="modal"]'),
+    closeBtn = $('.modal__close');
+
+    modalBtn.on('click', () => {
+      modal.toggleClass('modal--visible');
+    });
+    
+    closeBtn.on('click', () => {
+      modal.toggleClass('modal--visible');
+    });
+
+    $(document).on('keydown', (event) => {
+      if (event.key === 'Escape')
+        modal.removeClass('modal--visible');
+    });
+
+    $(document).on('click', (event) => {
+      let target = event.target;
+      console.log("target", target)
   
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  };
-
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape')
-    modal.classList.remove('modal--visible');
-  });
-
-  closeBtn.addEventListener('click', switchModal);
-
-  document.addEventListener('click', (event) => {
-    let target = event.target;
-
-    if (target.classList.contains('modal--visible'))
-      switchModal();
-  });
+      if ($(target).hasClass('modal--visible'))
+        modal.toggleClass('modal--visible');  
+    });
 });
