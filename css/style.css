@@ -338,6 +338,20 @@ template {
     padding: 18px 47px; }
   .button:hover {
     cursor: pointer; }
+  .button__scroll-to-top {
+    padding: 0;
+    background: url("../img/arrow-down.svg") no-repeat center;
+    transform: rotate(180deg);
+    height: 40px;
+    width: 40px;
+    border: 2px solid #E3B873;
+    border-radius: 50%;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    outline: none; }
 
 .label {
   font-size: 1.07rem; }
