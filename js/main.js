@@ -2,12 +2,12 @@ $(document).ready(() => {
   const modal = $('.modal'),
     modalBtn = $('[data-toggle="modal"]'),
     closeBtn = $('.modal__close');
-    scrollToTopBtn = $('.button__scroll-to-top');
+  scrollToTopBtn = $('.button__scroll-to-top');
 
   modalBtn.on('click', () => {
     modal.toggleClass('modal--visible');
   });
-  
+
   closeBtn.on('click', () => {
     modal.toggleClass('modal--visible');
   });
@@ -21,19 +21,48 @@ $(document).ready(() => {
     let target = event.target;
 
     if ($(target).hasClass('modal--visible'))
-      modal.toggleClass('modal--visible');  
+      modal.toggleClass('modal--visible');
   });
 
-   
-  $(window).scroll(function() {
+
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 400) {
       $(scrollToTopBtn).fadeIn('slow');
-    } else { 
-      $(scrollToTopBtn).fadeOut('slow'); 
+    } else {
+      $(scrollToTopBtn).fadeOut('slow');
     }
-    });
+  });
 
-    $(scrollToTopBtn).click(() => {
-      $('html, body').animate({scrollTop : 0}, 'slow');
-    });
+  $(scrollToTopBtn).click(() => {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 'slow');
+  });
+
+  // slider
+  const mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const next = $('.swiper-button-next'),
+    prev = $('.swiper-button-prev'),
+    bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + 10 + bullets.width() + 10);
+  bullets.css('left', prev.width() + 10);
+
+  const nextStep = $('.steps__swiper-button-next'),
+    prevStep = $('.steps__swiper-button-prev'),
+    bulletsStep = $('.steps__swiper-pagination');
+
+    nextStep.css('left', prevStep.width() + 10 + bulletsStep.width() + 10);
+    bulletsStep.css('left', prevStep.width() + 10);
 });

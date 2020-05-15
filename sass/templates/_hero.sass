@@ -15,6 +15,15 @@
     width: 100%
     height: 100%
     background: rgba($dark, 0.7)
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 3.46rem
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: $dark
   &__instagram
     position: absolute
     left: 0
@@ -34,6 +43,7 @@
     text-transform: uppercase
     color: $light
     text-decoration: none
+    z-index: 3
     &::after
       content: ''
       background: url('../img/arrow-down.svg') no-repeat center
@@ -52,7 +62,6 @@
     font-size: 1.57rem
     max-width: 500px
     line-height: 131%
-    margin: 0
     margin-bottom: 4rem
   &__button
     margin-right: 13.2px
