@@ -51,6 +51,18 @@ $(document).ready(() => {
       prevEl: '.swiper-button-prev',
     },
   });
+  
+  const mySwiper1 = new Swiper('.swiper-container1', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination1',
+      type: 'bullets'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+    },
+  });
 
   const next = $('.swiper-button-next'),
     prev = $('.swiper-button-prev'),

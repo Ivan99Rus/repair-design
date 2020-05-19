@@ -11,6 +11,12 @@
   &__slider
     display: flex
     flex-direction: column
+    .swiper
+      &-container1
+        max-width: 100%
+      &-slide
+        &-active
+          color: $light
     &-counter
       font-family: 'Yeseva One', cursive
       font-size: 1.286rem
@@ -37,6 +43,7 @@
     padding-top: 6.643rem
     //max-width: 54.714rem
     &-item
+      color: $secondary
       flex-basis: 30%
       margin-bottom: 3.286rem
     &-number
@@ -54,7 +61,7 @@
         bottom: -5px
         left: 0
         right: 0
-        background-color: $primary
+        background-color: $steps-disable
     &-text
       display: block
       max-width: 9.714rem
