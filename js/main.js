@@ -93,7 +93,7 @@ $(document).ready(() => {
 
   // валидация
   $('.modal__form').validate({
-    wrapper: "div",
+    errorElement: "div",
 
     errorClass: "invalid",
     rules: {
@@ -103,7 +103,11 @@ $(document).ready(() => {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 11,
+        maxlength: 11
+      },
       // compound rule
       userEmail: {
         required: true,
@@ -114,7 +118,7 @@ $(document).ready(() => {
       userName: {
         required: "Имя обязательно",
         minlength: "Имя не короче 2 букв",
-        minlength: "Имя не длинее 15 букв"
+        maxlength: "Имя не длинее 15 букв"
       },
       userPhone: "Телефон обязателен",
       userEmail: {

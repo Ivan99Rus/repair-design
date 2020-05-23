@@ -5,6 +5,9 @@
 #root files
 root/
 
+#css files
+css/
+
 ### Node ###
 # Logs
 logs

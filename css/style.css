@@ -401,7 +401,7 @@ label.invalid {
   color: tomato; }
 
 input.invalid {
-  border: 1px solid tomato;
+  border-bottom: 1px solid tomato;
   color: tomato; }
 
 .container {
@@ -1062,7 +1062,10 @@ body {
     padding: 4.285rem 0; }
   .footer__map {
     margin-bottom: 4rem;
-    min-height: 465px; }
+    min-height: 465px;
+    max-width: 925px;
+    margin-left: auto;
+    margin-right: auto; }
   .footer__contacts {
     font-size: 1.429rem;
     line-height: 2rem;
