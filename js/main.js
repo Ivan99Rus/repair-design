@@ -131,7 +131,7 @@ $(document).ready(() => {
 
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
-        center: [55.751574, 37.573856],
+        center: [47.232107, 39.6106245],
         zoom: 9
       }, {
         searchControlProvider: 'yandex#search'
@@ -143,8 +143,8 @@ $(document).ready(() => {
       ),
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
       }, {
         // Опции.
         // Необходимо указать данный тип макета.
