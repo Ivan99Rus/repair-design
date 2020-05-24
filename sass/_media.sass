@@ -18,7 +18,9 @@
   .row
     flex-direction: column
     align-items: center
-  .types, .design-project
+  .col-30
+    width: 50%
+  .types, .design-project, .team
     &__card
       margin-bottom: 5rem
   .card
@@ -31,10 +33,18 @@
       color: $light
     &__subtitle
       color: $light
-      
+  .clients
+    display: none
+  .footer
+    &__wrap
+      margin-top: -1rem
+
     
 
 @media screen and ( max-width: 576px )
+  .col
+    &-30, &-50
+      width: 80%
   .contacts
     &__phone
       margin-right: 0
@@ -56,6 +66,79 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+  .swiper
+    &-wrapper
+      margin-bottom: 35px
+    &-slide 
+      width: 100%
+  .project
+    &__col
+      margin-top: 33px
+
+@media screen and ( max-width: 570px )
+  .team
+    &__content
+      background-color: $dark
+      color: $light
+    &__card
+      &::before
+        left: -2.5rem
+  .control
+      background-color: $dark
+      color: $light
+      padding-bottom: 0
+      &__button
+        width: 100%
+        order: 2
+        margin-bottom: -2rem
+      &__policy-label
+        justify-content: flex-start
+        order: 1
+        margin-bottom: 62px
+      &__video
+        max-width: 340px
+        min-height: 207px
+        background: url('../img/video-mobile.jpg')
+      &__play
+        height: 37px
+        width: 37px
+      &__input
+        border-bottom: 1px solid $light
+        &-group
+          flex-basis: 100%
+          &-name
+            margin-bottom: 72px
+          &-tel
+            margin-bottom: 26px
+  .section
+    &-title
+      &__word
+        &::after
+          display: none
+  .container
+    width: 90%
+  .footer
+    background: $dark
+    &__wrap
+      background: $dark
+    &__input
+      border-bottom: 1px solid $light
+      &-group
+        flex-basis: 100%
+    &__policy-label
+      justify-content: flex-start
+    &__button
+      width: 100%
+    &__container
+      display: flex
+      flex-direction: column  
+    &__contacts
+      order: 2
+    &__map
+      max-width: 340px
+      height: 255px 
+    &__menu
+      display: none
 
 @media screen and ( max-height: 570px )
   .hero

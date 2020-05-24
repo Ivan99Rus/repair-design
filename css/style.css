@@ -1190,7 +1190,9 @@ body {
   .row {
     flex-direction: column;
     align-items: center; }
-  .types__card, .design-project__card {
+  .col-30 {
+    width: 50%; }
+  .types__card, .design-project__card, .team__card {
     margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
@@ -1199,9 +1201,15 @@ body {
   .design-project__section-title {
     color: #fff; }
   .design-project__subtitle {
-    color: #fff; } }
+    color: #fff; }
+  .clients {
+    display: none; }
+  .footer__wrap {
+    margin-top: -1rem; } }
 
 @media screen and (max-width: 576px) {
+  .col-30, .col-50 {
+    width: 80%; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -1220,7 +1228,73 @@ body {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .swiper-wrapper {
+    margin-bottom: 35px; }
+  .swiper-slide {
+    width: 100%; }
+  .project__col {
+    margin-top: 33px; } }
+
+@media screen and (max-width: 570px) {
+  .team__content {
+    background-color: #131313;
+    color: #fff; }
+  .team__card::before {
+    left: -2.5rem; }
+  .control {
+    background-color: #131313;
+    color: #fff;
+    padding-bottom: 0; }
+    .control__button {
+      width: 100%;
+      order: 2;
+      margin-bottom: -2rem; }
+    .control__policy-label {
+      justify-content: flex-start;
+      order: 1;
+      margin-bottom: 62px; }
+    .control__video {
+      max-width: 340px;
+      min-height: 207px;
+      background: url("../img/video-mobile.jpg"); }
+    .control__play {
+      height: 37px;
+      width: 37px; }
+    .control__input {
+      border-bottom: 1px solid #fff; }
+      .control__input-group {
+        flex-basis: 100%; }
+        .control__input-group-name {
+          margin-bottom: 72px; }
+        .control__input-group-tel {
+          margin-bottom: 26px; }
+  .section-title__word::after {
+    display: none; }
+  .container {
+    width: 90%; }
+  .footer {
+    background: #131313; }
+    .footer__wrap {
+      background: #131313; }
+    .footer__input {
+      border-bottom: 1px solid #fff; }
+      .footer__input-group {
+        flex-basis: 100%; }
+    .footer__policy-label {
+      justify-content: flex-start; }
+    .footer__button {
+      width: 100%; }
+    .footer__container {
+      display: flex;
+      flex-direction: column; }
+    .footer__contacts {
+      order: 2; }
+    .footer__map {
+      max-width: 340px;
+      height: 255px; }
+    .footer__menu {
+      display: none; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
