@@ -1,11 +1,17 @@
 $(document).ready(() => {
   const modal = $('.modal'),
+    modalSuccess = $('.modal-success'),
     modalBtn = $('[data-toggle="modal"]'),
-    closeBtn = $('.modal__close');
+    closeBtn = $('.modal__close'),
+    closeBtnSuccess = $('.modal-success__close');
   scrollToTopBtn = $('.button__scroll-to-top');
 
   modalBtn.on('click', () => {
     modal.toggleClass('modal--visible');
+  });
+
+  closeBtnSuccess.on('click', () => {
+    modalSuccess.toggleClass('modal-success--visible');
   });
 
   closeBtn.on('click', () => {
@@ -103,11 +109,7 @@ $(document).ready(() => {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: {
-        required: true,
-        minlength: 11,
-        maxlength: 11
-      },
+      userPhone: "required",
       // compound rule
       userEmail: {
         required: true,
@@ -125,6 +127,19 @@ $(document).ready(() => {
         required: "Обязательно укажите Email",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
+        }
+      });
     }
   })
 
@@ -162,7 +177,7 @@ $(document).ready(() => {
         iconImageOffset: [0, -32]
       });
 
-  
+
 
     myMap.geoObjects
       .add(myPlacemark);

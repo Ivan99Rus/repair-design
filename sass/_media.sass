@@ -44,7 +44,7 @@
 @media screen and ( max-width: 576px )
   .col
     &-30, &-50
-      width: 80%
+      width: 100%
   .contacts
     &__phone
       margin-right: 0
@@ -83,6 +83,24 @@
     &__card
       &::before
         left: -2.5rem
+  .card
+    &__item:nth-of-type(n+8) 
+      display: none
+    &__text
+      margin-top: -10.7rem
+      padding: 1.59rem 2.94rem
+    &__pricetag
+      padding: 0.914rem 4rem
+  .swiper
+    &__container
+      max-width: 305px
+      margin-left: 0
+      margin-top: 26px
+    &-slide
+      width: 100%
+      &__text
+        margin-bottom: 0.9rem
+
   .control
       background-color: $dark
       color: $light
@@ -112,9 +130,17 @@
             margin-bottom: 26px
   .section
     &-title
+      &__text
+        max-width: 305px
       &__word
         &::after
           display: none
+      &__heading
+        font-size: 22px
+    &-subtitle
+      font-size: 15px
+      line-height: 135.84%
+      max-width: 306px
   .container
     width: 90%
   .footer
