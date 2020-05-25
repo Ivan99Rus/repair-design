@@ -663,6 +663,9 @@ body {
   width: auto;
   bottom: 0; }
 
+.control__input {
+  color: #131313; }
+
 .control__section-title {
   margin-bottom: 2.214rem;
   margin-top: -30rem; }
@@ -1281,7 +1284,13 @@ body {
     background-color: #131313;
     color: #fff; }
   .team__card::before {
-    left: -2.5rem; }
+    left: 0.5rem; }
+  .team__card--3 {
+    margin-bottom: -3rem; }
+  .team__card-name {
+    color: #131313; }
+  .team__text {
+    display: none; }
   .card__item:nth-of-type(n+8) {
     display: none; }
   .card__text {
@@ -1297,6 +1306,8 @@ body {
     width: 100%; }
     .swiper-slide__text {
       margin-bottom: 0.9rem; }
+  .projects {
+    padding-bottom: 24.2rem; }
   .control {
     background-color: #131313;
     color: #fff;
@@ -1304,18 +1315,20 @@ body {
     .control__button {
       width: 100%;
       order: 2;
-      margin-bottom: -2rem; }
+      margin-bottom: -2rem;
+      padding: 1.6857rem 4.785rem; }
+    .control__label {
+      margin-bottom: 0.4rem; }
     .control__policy-label {
       justify-content: flex-start;
       order: 1;
-      margin-bottom: 62px; }
+      margin-bottom: 62px;
+      margin-top: -1rem; }
     .control__video {
       max-width: 340px;
-      min-height: 207px;
+      min-height: 216px;
+      margin-top: 3.3rem;
       background: url("../img/video-mobile.jpg"); }
-    .control__play {
-      height: 37px;
-      width: 37px; }
     .control__input {
       border-bottom: 1px solid #fff; }
       .control__input-group {
@@ -1323,7 +1336,18 @@ body {
         .control__input-group-name {
           margin-bottom: 72px; }
         .control__input-group-tel {
-          margin-bottom: 26px; }
+          margin-bottom: 0; }
+    .control__text {
+      font-size: 15px;
+      line-height: 175%;
+      margin-top: -2rem; }
+      .control__text::before {
+        margin-bottom: 1.3rem; }
+    .control__form {
+      margin-top: -3rem; }
+  .video__play {
+    height: 62px;
+    width: 62px; }
   .section-title__text {
     max-width: 305px; }
   .section-title__word::after {
@@ -1354,10 +1378,12 @@ body {
     .footer__contacts {
       order: 2; }
     .footer__map {
-      max-width: 340px;
-      height: 255px; }
+      width: 100%;
+      min-height: 240px; }
     .footer__menu {
-      display: none; } }
+      display: none; }
+  .ymaps-2-1-76-map {
+    height: 240px; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
