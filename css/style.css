@@ -440,7 +440,7 @@ body {
 
 .section {
   padding: 60px 0; }
-  .section--dark {
+  .section_dark {
     background-color: #131313;
     color: #fff; }
   .section img {
