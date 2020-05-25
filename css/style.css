@@ -455,8 +455,8 @@ body {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
       line-height: 138%; }
-    .section-title--primary {
-      color: #E3B873; }
+      .section-title__heading--primary {
+        color: #E3B873; }
     .section-title__word {
       display: flex;
       align-items: center; }
