@@ -334,8 +334,8 @@
 
     <section class="section leave-request">
       <div class="container">
-        <div class="row">
-          <div class="col-60 leave-request__col-60">
+        <div class="row leave-request__row">
+          <div class="leave-request__col-1">
             <ul class="leave-request__list">
               <li class="leave-request__item leave-request__item-1">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</li>
               <li class="leave-request__item leave-request__item-2">Бесплатный замер</li>
@@ -344,6 +344,44 @@
             </ul>
           </div>
           <!-- /.col-60 leave-request__col-60 -->
+          <div class="leave-request__col-2">
+            <div class="leave-request__form">
+              <div class="leave-request__dialog">
+                <h3 class="leave-request__title">Оставьте заявку на бесплатный выезд замерщика</h3>
+                <form action="send.php" method="POST" class="form leave-request__form">
+                  <div class="input-group leave-request__input-group leave-request__input-group-name">
+                    <label for="user-name" class="label form__label label--light">Имя</label>
+                    <input type="text" class="input leave-request__input form__input input--light" id="user-name" placeholder="Как вас зовут:" name="userName">
+                  </div>
+                  
+                  <div class="input-group leave-request__input-group leave-request__input-group-phone">
+                    <label for="user-phone" class="label form__label label--light">Телефон</label>
+                    <input type="tel" class="input leave-request__input form__input input--light" id="user-phone" placeholder="Ваш номер телефона:" name="userPhone">
+                  </div>
+                  
+                  <div class="input-group leave-request__input-group leave-request__input-group-email">
+                    <label for="user-email" class="label form__label label--light">Email</label>
+                    <input type="email" class="input leave-request__input form__input input--light" id="user-email" placeholder="Ваш email:" name="userEmail">
+                  </div>
+          
+                  <div class="policy leave-request__policy">
+                    <input type="checkbox" name="policy-checkbox" id="policy-checkbox" checked class="policy__checkbox">
+                    <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
+                  </div>
+                  <!-- /.policy -->
+                  <button class="button button--primary leave-request__button">Отправить заявку</button>
+                </form>
+                <!-- /.form leave-request__form -->
+              </div>
+              <!-- /.leave-request__dialog -->
+            </div>
+            <!-- /.leave-request -->
+            <div class="leave-request__discount-block">
+              <img src="img/discount.svg" alt="" class="leave-request__discount-img">
+              <p class="leave-request__discount-text">Это поможет сэкономить 10 - 20% от стоимости материалов</p>
+            </div>
+          </div>
+          <!-- /.col-30 -->
         </div>
       </div>
     </section>
