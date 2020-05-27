@@ -1,0 +1,50 @@
+.fantasy
+  background: url('../img/fantasy-bg.jpg') center no-repeat
+  color: $light
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__section
+    &-title
+      margin-top: 4rem
+      margin-left: -1.3rem
+      margin-bottom: 2.9rem
+      max-width: 29.357rem
+      font-size: 1.929rem
+  &__list
+    padding: 0
+    margin-left: -1.3rem
+    &-item
+      list-style-type: none
+      font-weight: 500
+      font-size: 1.829rem
+      //line-height: 172.4%
+      margin-bottom: 1.5rem
+      &--active
+        color: $primary
+      &--underline
+        border-bottom: 1px solid $primary
+  &__img-col
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-1, &-2
+      display: flex
+      align-items: center
+      flex-direction: column
+    &-1
+      //margin-left: 8rem
+    &-2
+      margin-top: -10.7rem
+  &__img
+    &-1
+      margin-bottom: 2.785rem
+    &-3
+      margin-bottom: 2.571rem
+
+.col
+  &-60
+    width: 64%
+  &-40
+    width: 40%

@@ -95,12 +95,12 @@ function root(done) {
 }
 
 function imgmin(done) {
-  src('img/**')
+  src('img/**/*.{png,jpg}')
     .pipe(tinypng({
       key: '1MnPPxqxjjHK8rtBplg0PTdpZKLDf8BT',
       //log: true
     }))
-    .pipe(dest('/dist/img/'))
+    .pipe(dest('dist/img/'))
   src('img/**/*.svg')
     .pipe(dest('dist/img/'))
   done();
