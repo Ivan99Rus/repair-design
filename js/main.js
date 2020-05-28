@@ -99,6 +99,15 @@ $(document).ready(() => {
     //slidesPerRow: 3
   });
 
+  //scroll
+  $(".menu__nav").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top - $('.header').height();
+    
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
+
   new WOW().init();
 
   //animation
@@ -114,6 +123,138 @@ $(document).ready(() => {
 
   // валидация
   $('.modal__form').validate({
+    errorElement: "div",
+
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длинее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
+        }
+      });
+    }
+  })
+  $('.control__form').validate({
+    errorElement: "div",
+
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длинее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
+        }
+      });
+    }
+  })
+  $('.leave-request__form').validate({
+    errorElement: "div",
+
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2 букв",
+        maxlength: "Имя не длинее 15 букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Обязательно укажите Email",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
+        }
+      });
+    }
+  })
+  $('.footer__form').validate({
     errorElement: "div",
 
     errorClass: "invalid",
