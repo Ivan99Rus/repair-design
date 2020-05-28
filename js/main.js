@@ -74,15 +74,30 @@ $(document).ready(() => {
     prev = $('.swiper-button-prev'),
     bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 10 + bullets.width() + 10);
-  bullets.css('left', prev.width() + 10);
+  next.css('left', prev.width() + 27 + bullets.width() + 20);
+  bullets.css('left', prev.width() + 27);
 
-  const nextStep = $('.steps__swiper-button-next'),
-    prevStep = $('.steps__swiper-button-prev'),
-    bulletsStep = $('.steps__swiper-pagination');
-
-  nextStep.css('left', prevStep.width() + 10 + bulletsStep.width() + 10);
-  bulletsStep.css('left', prevStep.width() + 10);
+  //slick
+  $('.steps__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.steps__slider-nav',
+    draggable: false
+  });
+  $('.steps__slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 0,
+    asNavFor: '.steps__slider',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: '10px',
+    draggable: false,
+    //rows: 2,
+    //slidesPerRow: 1
+  });
 
   new WOW().init();
 
@@ -128,7 +143,7 @@ $(document).ready(() => {
         email: "Введите в формате: name@domain.com"
       }
     },
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       $.ajax({
         type: "POST",
         url: "send.php",

@@ -1,73 +1,53 @@
 .steps
-  &__mini-title
+  margin-top: -9rem
+  &__col
+    &-1, &-2
+      border: 1px solid green
+      max-width: 50%
+    &-1
+    &-2
+  &__title
+    margin: 0
+    text-align: left
+    margin-bottom: 6.571rem
+    max-width: 19.071rem
+    font-size: 1.928rem
+    line-height: 2.642rem
+  &__subtitle
+    display: block
+    text-align: left
+    font-family: 'Futura Book'
+    font-style: normal
+    font-weight: 500
     font-size: 1.071rem
     line-height: 1.5rem
-    font-family: 'Futura Demi'
-    margin-bottom: 1.286rem
-  &__section-title
-    margin-bottom: 6.571rem
-    &::after
-      margin-left: 5.5rem
+    text-transform: uppercase
+    margin-bottom: 1.285rem
   &__slider
-    display: block
-    .swiper
-      &-container1
-        max-width: 100%
-      &-slide
-        &-active
-          color: $light
     &-counter
-      font-family: 'Yeseva One', cursive
-      font-size: 1.286rem
-      line-height: 1.786rem
-      text-transform: uppercase
-    &-header
-      font-family: 'Yeseva One', cursive
-      font-size: 1.071rem
-      line-height: 1.643
-      color: $primary
-      text-transform: uppercase
-      max-width: 11.571rem
-      margin-bottom: 1.167rem
+      margin-bottom: 6.571rem
     &-text
-      font-size: 1.286rem
-      line-height: 1.786rem
-      max-width: 24.071rem
-      margin-bottom: 4.286rem
-  &__content
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-    padding-top: 6.643rem
-    //max-width: 54.714rem
+      font-style: normal
+      font-weight: normal
+      font-size: 1.071rem
+      line-height: 1.285rem
     &-item
-      color: $secondary
-      flex-basis: 30%
-      margin-bottom: 3.286rem
-    &-number
-      position: relative
-      display: inline-block
-      margin-bottom: 1.214rem
+      &--hide
+        display: none !important
+  &__slide
+    &-header
+      max-width: 11.571rem
       font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
       font-size: 1.071rem
-      line-height: 1.5rem
+      line-height: 1.643rem
       text-transform: uppercase
-      &::after
-        content: ''
-        position: absolute
-        height: 2px
-        bottom: -5px
-        left: 0
-        right: 0
-        background-color: $steps-disable
+      color: $primary
+      margin-bottom: 1.142rem
     &-text
-      display: block
-      max-width: 9.714rem
+      max-width: 24.071rem
       font-size: 1.071rem
-      line-height: 1.286rem
-      margin: 0
-  &__dinamic-span
-    display: block  
-  &__img
-    margin-top: 3.166rem
+      line-height: 1.786rem
+  .steps__slider-nav
+    width: 100%

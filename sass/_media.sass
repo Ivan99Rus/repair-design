@@ -76,6 +76,20 @@
       margin-top: 33px
 
 @media screen and ( max-width: 570px )
+  .hero
+    max-height: 458px
+    &__title
+      font-size: 1.94rem
+    &__content
+      max-width: none
+    &__text
+      font-size: 1.49rem
+      margin-top: 1rem
+      margin-bottom: 3.18rem
+    &__button
+      margin-right: 0
+      width: 100%
+      margin-bottom: 2.35rem
   .team
     &__content
       background-color: $dark
@@ -106,45 +120,79 @@
       width: 100%
       &__text
         margin-bottom: 0.9rem
+  .leave-request
+    display: none
+  .steps
+    display: none
+  .fantasy
+    display: none
   .projects
-    padding-bottom: 24.2rem
+    padding-bottom: 30.8rem
+  .swiper
+    &-container
+      margin: auto
+      max-height: 201px
+    &-slide
+      margin-bottom: -0.3rem
+      &__heading
+        margin-bottom: 0.94rem
+      &-text
+        margin-bottom: 1.3rem
+  .project
+    &__col
+      margin-top: 48px
   .control
-      background-color: $dark
-      color: $light
-      padding-bottom: 0
-      &__button
-        width: 100%
-        order: 2
-        margin-bottom: -2rem
-        padding: 1.6857rem 4.785rem
-      &__label
-        margin-bottom: 0.4rem
-      &__policy-label
-        justify-content: flex-start
-        order: 1
-        margin-bottom: 62px
-        margin-top: -1rem
-      &__video
-        max-width: 340px
-        min-height: 216px
-        margin-top: 3.3rem
-        background: url('../img/video-mobile.jpg')
-      &__input
-        border-bottom: 1px solid $light
-        &-group
-          flex-basis: 100%
-          &-name
-            margin-bottom: 72px
-          &-tel
-            margin-bottom: 0
-      &__text
-          font-size: 15px
-          line-height: 175%
-          margin-top: -2rem
-          &::before
-            margin-bottom: 1.3rem
-      &__form
-        margin-top: -3rem
+    background-color: $dark
+    color: $light
+    padding-bottom: 0
+    &__button
+      width: 100%
+      order: 2
+      margin-bottom: -2rem
+      padding: 1.6857rem 4.785rem
+    &__label
+      margin-bottom: 0.4rem
+    &__policy-label
+      justify-content: flex-start
+      order: 1
+      margin-bottom: 62px
+      margin-top: -1rem
+    &__video
+      max-width: 340px
+      min-height: 216px
+      margin-top: 3.3rem
+      background: url('../img/video-mobile.jpg')
+    &__input
+      border-bottom: 1px solid $light
+      &-group
+        flex-basis: 100%
+        &-name
+          margin-bottom: 72px
+        &-tel
+          margin-bottom: 0
+    &__text
+        font-size: 15px
+        line-height: 165%
+        margin-top: -2rem
+        margin-bottom: 5.4rem
+        &::before
+          margin-bottom: 1.3rem
+    &__form
+      margin-top: -3rem
+  .types
+    &__card
+      margin-top: 1.7rem
+      &-2
+        margin-bottom: 7.2rem
+      &-text
+        margin-top: -11.7rem
+      &-title
+        margin-top: 0.2rem
+      &-list
+        margin-top: 1.1rem
+        margin-bottom: 2.1rem
+      &-pricetag
+        padding: 0.914rem 2.8rem
   .video
     &__play
       height: 62px
