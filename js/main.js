@@ -84,10 +84,10 @@ $(document).ready(() => {
     arrows: false,
     fade: true,
     asNavFor: '.steps__slider-nav',
-    draggable: false
+    draggable: false,
   });
   $('.steps__slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 6,
     slidesToScroll: 0,
     asNavFor: '.steps__slider',
     dots: false,
@@ -96,7 +96,7 @@ $(document).ready(() => {
     centerPadding: '10px',
     draggable: false,
     //rows: 2,
-    //slidesPerRow: 1
+    //slidesPerRow: 3
   });
 
   new WOW().init();

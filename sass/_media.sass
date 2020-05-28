@@ -4,8 +4,27 @@
   .nav
     &__item
       margin-right: 1rem
+  .leave-request__item
+    &-1
+      margin-left: 3rem
+      &::before
+        left: -5.6rem
+    &-2
+      margin-left: 8.5rem
+      &::before
+        left: -5.1rem
+    &-3
+      margin-left: 11.5rem
+      &::before
+        left: -5.5rem
+    &-4
+      margin-left: 9.5rem
+      &::before
+        left: -5.1rem
 
 @media screen and ( max-width: 992px )
+  .leave-request
+    display: none
   .nav
     display: none
   .hero
@@ -15,6 +34,38 @@
       margin-left: 0
 
 @media screen and ( max-width: 760px )
+  .fantasy
+    background-image: none
+    margin-top: -3.2rem
+    margin-bottom: 1.7rem
+    padding-top: 0
+    &__list
+      display: none
+    &__section-title
+      margin: 0
+      text-align: center
+      margin: auto
+    .col
+      &-40, &-60
+        width: 100%
+    &__img
+      &-2, &-3, &-4, &-1
+        display: none
+      &-1
+        background: url('../img/fantasy-mobile.jpg')
+      &-col
+        justify-content: center
+        &-1
+          margin-right: 0
+    &-hiden
+      display: block
+      margin-top: 24px
+  .design-project
+    margin-top: -15rem
+    padding-top: 15rem
+        
+
+
   .row
     flex-direction: column
     align-items: center
@@ -123,8 +174,6 @@
   .leave-request
     display: none
   .steps
-    display: none
-  .fantasy
     display: none
   .projects
     padding-bottom: 30.8rem
@@ -235,6 +284,8 @@
     &__menu
       display: none
   .ymaps-2-1-76-map
+    height: 240px !important
+  .ymaps-2-1-76-inner-panes
     height: 240px
 
 @media screen and ( max-height: 570px )
