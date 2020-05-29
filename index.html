@@ -8,11 +8,14 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 
 <body>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64439410, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64439410" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  
   <div class="header">
     <div class="container">
       <div class="menu">
@@ -51,7 +54,7 @@
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down wow bounce" data-wow-delay="4s">Листайте вниз</a>
+      <a href="#projects" class="hero__scroll-down wow bounce" data-wow-delay="4s">Листайте вниз</a>
     </section>
     <!-- /.hero -->
 
@@ -98,17 +101,17 @@
                 <div class="swiper-slide">
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Город:</h3>
-                    <span class="swiper-slide__value">Ростов-на-дону</span>
+                    <span class="swiper-slide__value">Шахты</span>
                   </div>
 
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Площадь:</h3>
-                    <span class="swiper-slide__value">81 m2</span>
+                    <span class="swiper-slide__value">100 m2</span>
                   </div>
 
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                    <span class="swiper-slide__value">3,5 месяца</span>
+                    <span class="swiper-slide__value">4 месяца</span>
                   </div>
 
                   <div class="swiper-slide__text">
@@ -120,17 +123,17 @@
                 <div class="swiper-slide">
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Город:</h3>
-                    <span class="swiper-slide__value">Ростов-на-дону</span>
+                    <span class="swiper-slide__value">Волгодонск</span>
                   </div>
 
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Площадь:</h3>
-                    <span class="swiper-slide__value">81 m2</span>
+                    <span class="swiper-slide__value">150 m2</span>
                   </div>
 
                   <div class="swiper-slide__text">
                     <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                    <span class="swiper-slide__value">3,5 месяца</span>
+                    <span class="swiper-slide__value">5 месяцев</span>
                   </div>
 
                   <div class="swiper-slide__text">
@@ -154,11 +157,11 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="img/project.jpg" alt="project">
+                  <img src="img/project-1.jpg" alt="project">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="img/project.jpg" alt="project">
+                  <img src="img/projects-2.jpg" alt="project">
                 </div>
 
               </div>
@@ -182,7 +185,9 @@
         </div>
         <!-- /.section-title -->
         <div class="control__video video">
-          <img src="img/play-icon.svg" alt="" class="video__play">
+          <a  class="video__play" href="https://www.youtube.com/watch?v=i3_EH3N-Kd0" data-fancybox>
+            <img src="img/play-icon.svg" alt="">
+          </a>
         </div>
         <!-- /.control__video video -->
         <p class="control__text">
@@ -576,7 +581,7 @@
             <div class="row team__row">
                 <div class="col-30">
                   <div class="card team__card team__card--1">
-                    <img src="img/team-1.jpg" alt="team-1" class="team__card-image">
+                    <img src="img/team-1.jpg" alt="team-1" class="team__card-image team__card-image--1">
                     <div class="team__card-content">
                       <h2 class="team__card-name">Алексей Колмаков</h2>
                       <span class="team__card-profession">Проектный менеджер</span>
@@ -588,7 +593,7 @@
                 <!-- /.col -->
                 <div class="col-30">
                   <div class="card team__card team__card--2">
-                    <img src="img/team-2.jpg" alt="team-2" class="team__card-image">
+                    <img src="img/team-2.jpg" alt="team-2" class="team__card-image team__card-image--2">
                     <div class="team__card-content">
                       <h2 class="team__card-name">Алиса Сухорукова</h2>
                       <span class="team__card-profession">Дизайнер</span>
@@ -600,7 +605,7 @@
                 <!-- /.col -->
                 <div class="col-30">
                   <div class="card team__card team__card--3">
-                    <img src="img/team-3.jpg" alt="team-3" class="team__card-image">
+                    <img src="img/team-3.jpg" alt="team-3" class="team__card-image team__card-image--3">
                     <div class="team__card-content">
                       <h2 class="team__card-name">Давид Волынев</h2>
                       <span class="team__card-profession">Бригадир</span>
@@ -875,6 +880,7 @@
   <script src="slick/slick.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

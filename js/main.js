@@ -107,6 +107,14 @@ $(document).ready(() => {
     
       $('body,html').animate({scrollTop: top}, 1500);
   });
+  
+  $(".hero").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top - $('.header').height();
+    
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
 
   new WOW().init();
 

@@ -1,3 +1,7 @@
+@media screen and ( max-width: 1250px )
+  .menu__nav
+    font-size: 12px
+
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
@@ -23,6 +27,11 @@
         left: -5.1rem
 
 @media screen and ( max-width: 992px )
+  .swiper-container 
+    max-width: 100%
+    margin-left: 0
+
+@media screen and ( max-width: 992px )
   .leave-request
     display: none
   .nav
@@ -34,6 +43,8 @@
       margin-left: 0
 
 @media screen and ( max-width: 760px )
+  .hero::after
+    display: none
   .fantasy
     background-image: none
     margin-top: -3.2rem
@@ -63,9 +74,6 @@
   .design-project
     margin-top: -15rem
     padding-top: 15rem
-        
-
-
   .row
     flex-direction: column
     align-items: center
@@ -89,8 +97,6 @@
   .footer
     &__wrap
       margin-top: -1rem
-
-    
 
 @media screen and ( max-width: 576px )
   .col
@@ -142,12 +148,12 @@
       width: 100%
       margin-bottom: 2.35rem
   .team
+    .col-30
+      width: 90%
     &__content
       background-color: $dark
       color: $light
     &__card
-      &::before
-        left: 0.5rem
       &--3
         margin-bottom: -3rem
       &-name
