@@ -1,53 +1,83 @@
 .steps
-  margin-top: -9rem
-  &__col
-    &-1, &-2
-      border: 1px solid green
-      max-width: 50%
-    &-1
-    &-2
-  &__title
-    margin: 0
-    text-align: left
-    margin-bottom: 6.571rem
-    max-width: 19.071rem
+  margin-top: -83px
+  padding-top: 0
+  padding-bottom: 0
+  &__swiper-container
+    max-width: 765px
+  &__section-title
+    margin-top: 0.357rem
+    margin-bottom: 6.375rem
     font-size: 1.928rem
-    line-height: 2.642rem
-  &__subtitle
-    display: block
+    font-weight: 400
+    letter-spacing: 0
+    line-height: 2.64rem
     text-align: left
-    font-family: 'Futura Book'
-    font-style: normal
-    font-weight: 500
+    color: $primary
+  &__how-work
+    font-size: 1.07rem
+    color: $light
+  &__number-slide
+    font-family: 'Yeseva One'
+    font-size: 1.285rem
+    margin-bottom: 0
+  &-slide__heading
+    margin-top: 1.5rem
+    font-size: 1.071rem
+    line-height: 1.69rem
+  &__slide-value
+    max-width: 88%
+    margin-bottom: 6.7rem
+    line-height: 1.785rem
+    p
+      margin-top: 0.785rem
+    &__button
+      &-next
+        &:focus
+          outline: none
+          box-shadow: none
+        &:active
+          outline: none
+          box-shadow: none
+      &-prev
+        &:focus
+          outline: none
+          box-shadow: none
+        &:active
+          outline: none
+          box-shadow: none
+  &__col-60
+    padding-top: 6rem
+    max-width: 62%
+
+  &-block
+    margin-bottom: 2.1rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item
+      flex-basis: 24%
+      margin-right: 1rem
+      margin-bottom: 1.571rem
+      opacity: 0.5
+      cursor: pointer
+      &--active
+        opacity: 1
+      &:nth-of-type(3)
+        margin-right: 0
+      &:last-of-type
+        margin-right: 0
+  &__title-block
+    margin-bottom: 0.8rem
     font-size: 1.071rem
     line-height: 1.5rem
-    text-transform: uppercase
-    margin-bottom: 1.285rem
-  &__slider
-    &-counter
-      margin-bottom: 6.571rem
-    &-text
-      font-style: normal
-      font-weight: normal
-      font-size: 1.071rem
-      line-height: 1.285rem
-    &-item
-      &--hide
-        display: none !important
-  &__slide
-    &-header
-      max-width: 11.571rem
-      font-family: 'Yeseva One', cursive
-      font-style: normal
-      font-weight: normal
-      font-size: 1.071rem
-      line-height: 1.643rem
-      text-transform: uppercase
-      color: $primary
-      margin-bottom: 1.142rem
-    &-text
-      max-width: 24.071rem
-      font-size: 1.071rem
-      line-height: 1.786rem
-  .steps__slider-nav
-    width: 100%
+    &::after
+      content: ''
+      width: 16px
+      height: 1px
+      background-color: $primary
+      display: flex
+      justify-content: felx-start
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0px 9.5px

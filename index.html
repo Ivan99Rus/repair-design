@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
+  <title>Repair Design</title>
 </head>
 
 <body>
@@ -49,7 +50,7 @@
             стоимости материалов за счет организации работы
           </p>
           <button data-toggle="modal" class="button hero__button button--primary wow fadeInRight" data-wow-delay="0.5s">Рассчитать стоимость</button>
-          <button class="button hero__button button--outline wow fadeInRight" data-wow-delay="0.5s">Отправить заявку</button>
+          <button class="button hero__button hero__button--2 button--outline wow fadeInRight" data-wow-delay="0.5s">Отправить заявку</button>
         </div>
         <!-- /.hero__content -->
       </div>
@@ -200,12 +201,12 @@
         <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group control__input-group-name input-group">
             <label for="user-name" class="label form__label control__label label--dark">Имя</label>
-            <input type="text" class="input control__input form__input" id="control__user-name" placeholder="Как вас зовут:">
+            <input name="userName" type="text" class="input control__input form__input" id="control__user-name" placeholder="Как вас зовут:">
           </div>
           
           <div class="control__input-group input-group control__input-group-tel">
             <label for="user-phone" class="label form__label control__label label--dark">Телефон</label>
-            <input type="tel" class="input control__input form__input" id="control__user-phone" placeholder="Ваш номер телефона:">
+            <input name="userPhone" type="tel" class="input control__input form__input" id="control__user-phone" placeholder="Ваш номер телефона:">
           </div>
           
           <button class="button button--primary control__button">Отправить</button>
@@ -357,21 +358,21 @@
                 <form action="send.php" method="POST" class="form leave-request__form">
                   <div class="input-group leave-request__input-group leave-request__input-group-name">
                     <label for="user-name" class="label form__label label--light">Имя</label>
-                    <input type="text" class="input leave-request__input form__input input--light" id="user-name" placeholder="Как вас зовут:" name="userName">
+                    <input type="text" class="input leave-request__input form__input input--light" id="leave-request__user-name" placeholder="Как вас зовут:" name="userName">
                   </div>
                   
                   <div class="input-group leave-request__input-group leave-request__input-group-phone">
                     <label for="user-phone" class="label form__label label--light">Телефон</label>
-                    <input type="tel" class="input leave-request__input form__input input--light" id="user-phone" placeholder="Ваш номер телефона:" name="userPhone">
+                    <input type="tel" class="input leave-request__input form__input input--light" id="leave-request__user-phone" placeholder="Ваш номер телефона:" name="userPhone">
                   </div>
                   
                   <div class="input-group leave-request__input-group leave-request__input-group-email">
                     <label for="user-email" class="label form__label label--light">Email</label>
-                    <input type="email" class="input leave-request__input form__input input--light" id="user-email" placeholder="Ваш email:" name="userEmail">
+                    <input type="email" class="input leave-request__input form__input input--light" id="leave-request__user-email" placeholder="Ваш email:" name="userEmail">
                   </div>
           
                   <div class="policy leave-request__policy">
-                    <input type="checkbox" name="policy-checkbox" id="policy-checkbox" checked class="policy__checkbox">
+                    <input type="checkbox" name="policy-checkbox" id="leave-request__policy-checkbox" checked class="policy__checkbox">
                     <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
                   </div>
                   <!-- /.policy -->
@@ -391,49 +392,184 @@
         </div>
       </div>
     </section>
-    <!-- /.section leave-request -->
 
     <section class="section fantasy">
       <div class="container">
         <div class="row fantasy__row">
-          <div class="col-40">
-            <h2 class="fantasy__section-title section-title__heading section-title__heading--primary">Мы реализуем ваши самые смелые фантазии</h2>
-            <ul class="fantasy__list">
-              <li class="fantasy__list-item fantasy__list-item--active"><span class="fantasy__list-item--underline">Американская</span> классика</li>
-              <li class="fantasy__list-item">Имперский стиль</li>
-              <li class="fantasy__list-item">Классика</li>
-              <li class="fantasy__list-item">Лофт</li>
-              <li class="fantasy__list-item">Минимализм</li>
-              <li class="fantasy__list-item">Прованс</li>
-              <li class="fantasy__list-item">Романтизм</li>
-              <li class="fantasy__list-item">Скандиавский стиль</li>
-              <li class="fantasy__list-item">Средиземноморский стиль</li>
-              <li class="fantasy__list-item">Хайтек</li>
-              <li class="fantasy__list-item">Эклектизм</li>
+          <div class="col-30 fantasy__col-30">
+            <h2 class="section-title--dark fantasy__section-title">Мы реализуем
+              ваши самые&nbsp;смелые&nbsp;фантазии
+            </h2>
+            <ul class="fantasy-list">
+              <li class="fantasy-list__item fantasy-list__item--active" data-tab="1">Американская классика</li>
+              <li class="fantasy-list__item" data-tab="2">Имперский стиль</li>
+              <li class="fantasy-list__item" data-tab="3">Классика</li>
+              <li class="fantasy-list__item" data-tab="4">Лофт</li>
+              <li class="fantasy-list__item" data-tab="5">Минимализм</li>
+              <li class="fantasy-list__item" data-tab="6">Прованс</li>
+              <li class="fantasy-list__item" data-tab="7">Романтизм</li>
+              <li class="fantasy-list__item" data-tab="8">Скандинавский стиль</li>
+              <li class="fantasy-list__item" data-tab="9">Средиземноморский стиль</li>
+              <li class="fantasy-list__item" data-tab="10">Хайтек</li>
+              <li class="fantasy-list__item" data-tab="11">Эклектизм</li>
             </ul>
           </div>
-          <!-- /.col-30 -->
-          <div class="col-60">
-            <div class="fantasy__img-col">
-              <div class="fantasy__img-col-1">
-                <img class="fantasy-hiden" src="img/fantasy-mobile.jpg" alt="">
-                <img class="fantasy__img-1" src="img/fantasy/fantasy-1.jpg" alt="">
-                <img class="fantasy__img-2" src="img/fantasy/fantasy-2.jpg" alt="">
-              </div>
-              <!-- /.fantasy__img-col-1 -->
-              <div class="fantasy__img-col-2">
-                <img class="fantasy__img-3" src="img/fantasy/fantasy-3.jpg" alt="">
-                <img class="fantasy__img-4" src="img/fantasy/fantasy-4.jpg" alt="">
-              </div>
-              <!-- /.fantasy__img-col-2 -->
+          <!-- /.col-30 fantasy__col-30 -->
+
+
+          <div class="col-60 fantasy__col-60 fantasy__col-60--active js-tab-content" data-tab="1">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/american-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/american-2.jpg" alt="Интерьер квартиры">
             </div>
-            <!-- /.fantasy__img-col -->
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/american-3.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/american-4.jpg" alt="Интерьер квартиры">
+            </div>
           </div>
-          <!-- /.col-70 -->
+
+          <div class="col-60 fantasy__col-60  js-tab-content" data-tab="2">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/hightech-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/hightech-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/hightech-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/hightech-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60  js-tab-content" data-tab="3">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/classic-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/classic-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/classic-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/classic-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60 js-tab-content" data-tab="4">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/eclecticism-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/eclecticism-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/eclecticism-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/eclecticism-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60  js-tab-content" data-tab="5">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/imperial-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/imperial-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/imperial-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/imperial-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60 js-tab-content" data-tab="6">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/mediterranean-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/mediterranean-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/mediterranean-3.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/mediterranean-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60  js-tab-content" data-tab="7">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/minimal-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/minimal-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/minimal-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/minimal-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60 js-tab-content" data-tab="8">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/provence-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/provence-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-2" src="img/fantasy/provence-3.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/provence-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60  js-tab-content" data-tab="9">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/romanticism-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/romanticism-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/romanticism-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/romanticism-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60 js-tab-content" data-tab="10">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/hightech-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/hightech-3.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/hightech-4.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/hightech-2.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
+          <div class="col-60 fantasy__col-60  js-tab-content" data-tab="11">
+            <div class="fantasy__img fantasy__img--top">
+              <img class="fantasy__img--pic-1" src="img/fantasy/american-1.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-2" src="img/fantasy/american-2.jpg" alt="Интерьер квартиры">
+            </div>
+            <div class="fantasy__img fantasy__img--down">
+              <img class="fantasy__img--pic-3" src="img/fantasy/american-3.jpg" alt="Интерьер квартиры">
+              <img class="fantasy__img--pic-4" src="img/fantasy/american-4.jpg" alt="Интерьер квартиры">
+            </div>
+          </div>
+
         </div>
+        <!-- /.row fantasy__row -->
       </div>
     </section>
-    <!-- /.section fantasy -->
+
+    <div class="container swiper-slide-mob swiper-slide-mob__title">
+      <h2 class="swiper-section-title">Мы реализуем
+        ваши самые&nbsp;смелые фантазии
+      </h2>
+      <div class="swiper-container swiper-fantasy">
+        <div class="swiper-wrapper wrapper-fantasy">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img class="swiper-slide-mob__img" src="img/fantasy/classic-3.jpg" alt="Интерьеры квартиры">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide-mob__img" src="img/fantasy/classic-2.jpg" alt="Интерьеры квартиры">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide-mob__img" src="img/fantasy/american-3.jpg" alt="Интерьеры квартиры">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide-mob__img" src="img/fantasy/classic-2.jpg" alt="Интерьеры квартиры">
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-fantasy-prev"></div>
+        <div class="swiper-fantasy-next"></div>
+      </div>
+    </div>
+
+
 
     <section class="section design-project">
       <div class="container">
@@ -559,6 +695,169 @@
       </div>
     </section>
     <!-- /.section design-project -->
+
+    <section class="section steps section_dark">
+      <div class="container">
+        <div class="row steps__row">
+
+          <div class="col-30 steps__col-30">
+            <div class="section-title steps__section-title section-title--left">
+              <span class="steps__how-work">как мы работаем</span>
+              <h2 class="steps__section-title section-title--dark">
+                6 шагов<br><span class="section-title__word steps__title-word">до цели</span>
+              </h2>
+            </div>
+            <!-- Слайдер -->
+            <div class="swiper-container steps__swiper-container">
+              <div class="swiper-wrapper steps__wrapper swiper-no-swiping ">
+                <!-- Slides -->
+                <div class="swiper-slide steps__slide" data-text="1">
+                  <span class="number-slide steps__number-slide">1/6</span>
+                  <div class="slide-text steps__slide-text">
+                    <h3 class="swiper-slide__heading steps-slide__heading">Выезд на замеры <br> помещения</h3>
+                    <div class="swiper-slide__value steps__slide-value">
+                      <p>После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей
+                        квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p>Оценщик приходит, чтобы измерить комнату. <br>Он проконсультирует вас по вопросам техники
+                        ремонта,
+                        дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide steps__slide" data-text="2">
+                  <span class="number-slide steps__number-slide">2/6</span>
+                  <div class="slide-text steps__slide-text">
+                    <h3 class="swiper-slide__heading steps-slide__heading">Составление <br> сметы </h3>
+                    <div class="swiper-slide__value steps__slide-value">
+                      <p>После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей
+                        квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p>Оценщик приходит, чтобы измерить комнату. <br>Он проконсультирует вас по вопросам техники
+                        ремонта,
+                        дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide steps__slide" data-text="3">
+                  <span class="number-slide steps__number-slide">3/6</span>
+                  <div class="slide-text steps__slide-text">
+                    <h3 class="swiper-slide__heading steps-slide__heading">Разработка <br> дизайн проекта</h3>
+                    <div class="swiper-slide__value steps__slide-value">
+                      <p>После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей
+                        квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p>Оценщик приходит, чтобы измерить комнату. <br>Он проконсультирует вас по вопросам техники
+                        ремонта,
+                        дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide steps__slide" data-text="4">
+                  <span class="number-slide steps__number-slide">4/6</span>
+                  <div class="slide-text steps__slide-text">
+                    <h3 class="swiper-slide__heading steps-slide__heading">Закупка расходных <br> материалов</h3>
+                    <div class="swiper-slide__value steps__slide-value">
+                      <p>После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей
+                        квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p>Оценщик приходит, чтобы измерить комнату. <br>Он проконсультирует вас по вопросам техники
+                        ремонта,
+                        дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide steps__slide" data-text="5">
+                  <span class="number-slide steps__number-slide">5/6</span>
+                  <div class="slide-text steps__slide-text">
+                    <h3 class="swiper-slide__heading steps-slide__heading">Ремонтно-отделочные <br> работы</h3>
+                    <div class="swiper-slide__value steps__slide-value">
+                      <p>После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей
+                        квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p>Оценщик приходит, чтобы измерить комнату. <br>Он проконсультирует вас по вопросам техники
+                        ремонта,
+                        дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide steps__slide" data-text="69">
+                  <span class="number-slide steps__number-slide">6/6</span>
+                  <div class="slide-text steps__slide-text">
+                    <h3 class="swiper-slide__heading steps-slide__heading">Приемка-сдача <br> работ</h3>
+                    <div class="swiper-slide__value steps__slide-value">
+                      <p>После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей
+                        квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p>Оценщик приходит, чтобы измерить комнату. <br>Он проконсультирует вас по вопросам техники
+                        ремонта,
+                        дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev steps__button-prev swiper-no-swiping"></div>
+              <div class="swiper-pagination steps__pagination swiper-no-swiping"></div>
+              <div class="swiper-button-next steps__button-next swiper-no-swiping"></div>
+            </div>
+            <!-- /Слайдер -->
+          </div>
+          <div class="col-60 steps__col-60">
+            <div class="steps-block swiper-menu ">
+              <div class="steps-block__item steps-block__item--active" data-index="1">
+                <h4 class="title-block steps__title-block">01</h4>
+                <span class="description">Выезд на замер <br> помещения</span>
+              </div>
+              <div class="steps-block__item" data-index="2">
+                <h4 class="title-block steps__title-block">02</h4>
+                <span class="description">Составление <br> сметы</span>
+              </div>
+              <div class="steps-block__item" data-index="3">
+                <h4 class="title-block steps__title-block">03</h4>
+                <span class="description">Разработка <br> дизайн проекта</span>
+              </div>
+              <div class="steps-block__item" data-index="4">
+                <h4 class="title-block steps__title-block">04</h4>
+                <span class="description">Закупка расходных <br> материалов</span>
+              </div>
+              <div class="steps-block__item" data-index="5">
+                <h4 class="title-block steps__title-block">05</h4>
+                <span class="description">Ремонтно-отделочные <br> работы</span>
+              </div>
+              <div class="steps-block__item" data-index="6">
+                <h4 class="title-block steps__title-block">06</h4>
+                <span class="description">Приемка-сдача <br> работ</span>
+              </div>
+            </div>
+            <!-- Слайдер картинка -->
+            <div class="swiper-container steps__swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper swiper-no-swiping">
+                <!-- Slides -->
+                <div class="swiper-slide ">
+                  <img src="img/step-1.jpg" alt="01 Выезд на замеры помещения">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/step-2.jpg" alt="02 Составление сметы">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/step-3.jpg" alt="03 Разработка
+                  дизайн проекта">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/step-4.jpg" alt="04 Закупка расходных
+                  материалов">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/step-5.jpg" alt="05 Ремонтно-отделочные
+                  работы">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/step-6.jpg" alt="06 риемка-сдача
+                  работ">
+                </div>
+              </div>
+            </div>
+            <!-- /Слайдер картинка -->
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section team" id="team">
       <div class="container">
@@ -758,11 +1057,11 @@
           
           <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" class="input footer__input form__input input--light" id="footer__user-name" placeholder="Как вас зовут:">
+            <input type="text" class="input footer__input form__input input--light" id="footer__user-name" placeholder="Как вас зовут:" name="userName">
           </div>
           <div class="input-group footer__input-group">
             <label for="user-phone" class="label form__label label--light">Телефон</label>
-            <input type="tel" class="input footer__input form__input input--light" id="footer__user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" class="input footer__input form__input input--light" id="footer__user-phone" placeholder="Ваш номер телефона:" name="userPhone">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <label for="footer__user-question" class="label form__label label--light">Вопрос</label>
@@ -781,13 +1080,13 @@
         <div class="footer__contacts">
           <p class="footer__contacts-text">
             Ростов на дону, Торговый центр Plaza
-            Прямой телефон +7 (999) 768 32 99
+            Прямой телефон <a href="tel:+79997683299" class="phone contacts__phone footer__contact">+7 (999) 768 32 99</a>
           </p>
           <div class="footer__contacts-social">
-            <a href="#" class="footer__contacts-link">
+            <a href="mailto:ivananapa@mail.ru" class="footer__contacts-link">
               <img src="img/social-1.svg" alt="message">
             </a>
-            <a href="#" class="footer__contacts-link">
+            <a href="https://www.instagram.com/" target="_blank" class="footer__contacts-link">
               <img src="img/social-2.svg" alt="instagram">
             </a>
           </div>
@@ -808,8 +1107,8 @@
             <a href="#" class="nav__item">Отзывы</a>
             <a href="#" class="nav__item">Контакты</a>
           </nav>
-          <div class="contacts menu__contacts footer__menu-contacts">
-            <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+          <div class="contacts footer__menu-contacts">
+            <a href="tel:+79997683299" class="phone footer__phone contacts__phone">+7 (999) 768-32-99</a>
             <button data-toggle="modal" class="button contacts__button button--primary">Заказать звонок</button>
           </div>
         </div>
@@ -851,8 +1150,6 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
-
-
 
   <div class="modal-success">
     <div class="modal-success__dialog">

@@ -8,6 +8,11 @@
   .nav
     &__item
       margin-right: 1rem
+  .steps
+    &__col-30
+      max-width: 37%
+    &__slide-value
+      max-width: 95%
   .leave-request__item
     &-1
       margin-left: 3rem
@@ -41,6 +46,8 @@
       display: none
     &__content
       margin-left: 0
+  .steps
+    display: none
 
 @media screen and ( max-width: 760px )
   .hero::after
@@ -102,6 +109,9 @@
   .col
     &-30, &-50
       width: 100%
+  .footer
+    .contacts__phone
+      color: $primary 
   .contacts
     &__phone
       margin-right: 0
@@ -294,7 +304,9 @@
   .ymaps-2-1-76-inner-panes
     height: 240px
 
-@media screen and ( max-height: 570px )
+@media screen and ( max-height: 600px )
   .hero
     &__scroll-down
       display: none
+  .modal__input-group
+    margin-bottom: 1rem

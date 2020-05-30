@@ -23,7 +23,8 @@ try {
     $mail->Password   = $password;                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
-
+    $mail->CharSet = "utf-8";
+    
     //Recipients
     $mail->setFrom('repair.design@gmail.com');
     $mail->addAddress('ivananapa@mail.ru');     // Add a recipient
